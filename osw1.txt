@@ -1,0 +1,210 @@
+1,����Servlet��ƴ����һ��form�����������ݲ���ʾ��
+���������1.form����input��û��name������û��value������û��type
+         2.Dao�ļ���û�з��ض�����߼���
+         3.Service��û�з���ֵ
+2.��Servlet��ƴ����һ��html�ı����������ݲ���ʾ��
+���������1.response.ContentType("text/html;charset=utf-8")������
+3.������Ч��
+���������1.sql���д����
+         2.�����ظ�
+4.Ϊʲô�޸ĵ�ǰ��Ϣ����֮��ȫ����Ϣ�����޸��ˣ�
+���������1.sql�����ˣ��޸����û��where id = ����
+         2.���ݿ������е�id��һ��
+5.Ϊʲô�޸���Ϣ֮�����ݻ��һ����
+���������1.��ǰ������д���ˣ������˲�����Ϣ��Servlet�����
+6.Ϊʲô��sql�����username�����ڣ�
+���������1.������oracle���ֶ�ʹ�ô�д
+7.Ϊʲô�����û�����ʱ��Ѵ����Ķ������ѭ��������û��������붼û�������ʱ��
+�ᱨ�û������ڵ��쳣��
+���������1.
+8.Ϊʲô�����ݿ����ֶ��ô�д��dao��߻�ȡ�ֶβ��ô�д������sql�����Ҳ���Բ��ô�д��
+�������гɹ��أ�
+���������1.
+9.Ϊʲô����500�쳣����ת����ָ��ҳ�棿
+���������1.��ť�������ӷ��͵����������������˱��Servlet
+10.Ϊʲô�õ�������Ϊnull��
+���������1.���е�name����ֵд���ˣ������ݿ��еĲ�ƥ�䣬����req.getParameter("username");
+�е����ݲ�ƥ��
+11.Ϊʲô���ݿ���û�����ݣ�����ע����Ϣʱ����ʾ�����ҵ��������
+���������1.���Dao�ļ���дʱ��������������Ǹ�ѭ����Դ����Ķ���
+��û�н����κ����Σ����㴴���Ķ�������ѭ������ߵ�ʱ����ķ���ֵ
+Ҳ����ѭ�������ߣ���ô��ʱ������ķ���ֵ�������һ�����󣬵���
+�����������û��ֵ���������� obj = null�����ԣ�����ת��serviceʱ��
+��Զ��������������󣬶�����ж�������ж��������Ϊ��Ϊnull������
+���������ô�϶�����Ϊ�գ�ֻ�Ƕ������û��ֵ���ѣ����Ծͻ����
+����Ϊnull��ѭ�����Ҳ������������ˣ��ͻ�����û��Ѵ��ڣ��ж���
+���������̶���������ѭ����ߣ�ֻ�аѶ�����ڽ����ѭ������ߣ���ʱ
+���û�н���ѭ������ߣ�Ҳ����û�ж�������󣬾ͻ�ִ���±ߣ�����
+��һ������null����ô��ʱ�ڴ˽���service��ͻ��ж϶���Ϊnull���ͻ�
+���� obj = null��ѭ���У�Ҳ����������ٴ�������������ֵ
+12.�ֶβ����ڵ�������ô�����
+���������Oracle���ݿ����ִ�Сд������ֶ�����Сд����ôOracle
+���ݿ���Զ��������˫��������������д���ֶ�����Сд�ģ��������
+ֱ�ӵİ취�����㴴���ֶε�ʱ��ֱ���ô�д��һ�������ֱ�ӹ�ܵ���
+���У������ı���Ҳ������д����ֹ�����������⣬��֮һ�仰��Oracle
+�д����Ķ����������ô�д��ĸ��һЩ��ȷ�����ؾ�ӭ�ж�����
+13.Ϊʲô�޸�������Ϣ֮����Ҫ�ض��򵽲�ѯȫ����Ϣ��ҳ�棬����
+��ͷ��Ϣ��Ȼ��update.doҲ�������а���Ϣ�����޸�ҳ�棬������Ϣ
+�Ѿ��޸Ĺ��ˣ�
+14.Ϊʲô�������ͷ��ʾ��ת����Servlet������ҳ�汨500����ʾnull��
+���������������û�и�Servlet�ύ���ݣ���һ���������û��insert
+ҳ�棬��findAllҳ��������Ӱ�ť����Ӧ��ת�����ҳ�棬����ʵ����
+û�У�˵���������Ӱ�ť���͵�������ֱ��ָ��Servlet
+15.
+INFO [http-nio-8080-exec-1] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:472)
+at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:683)
+at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+at java.lang.Thread.run(Thread.java:748)
+���������//�ѵ��ǲ��������ض���
+//            if (user == null) {
+//                resp.sendRedirect("/login.jsp");
+//                System.out.println("�û���������");
+//            }else if (user.getUsername() != password) {
+//                System.out.println("�û��������벻����");
+//            }
+            resp.sendRedirect("/pages/main.jsp");
+�����Ǵ��������⣬������������֮��Ϳ�����
+
+16.java.sql.SQLException: No value specified for parameter 1
+���������1.�õ���PreparedStatementִ����������ǲ�ѯ��䣬��
+������Ҫ���ǣ���λ��ָ��ֵ
+17.java.sql.SQLException: Column 'password' not found.
+������������������ʱ����ȡ���ֶ��������ݿ��е���Ҫͳһ
+18.д�����ʱ��Ҫע�������
+���������1.���ݿ�ʱ�����ӵ����Լ�������
+           url=jdbc:mysql:///apartment
+           Ҳ����apartment�ǲ����Լ�������
+         2.Servlet����Ӧ�����ݿ�ı����ʽ�Ƿ���ȷ
+           resp.setContentType("text/html;charset=UTF-8");
+           Ҳ���������ڵĶ���д���Ƿ���ȷ
+           �����������ط��ı����ʽ�Ƿ�ΪUTF-8
+           utf-8��д��Сдû�й�ϵ
+19.�������͵�Servlet֮����Ӧ��һ��ҳ�棬����û�н��룬�ǿհ�ҳ��
+���������1.�鿴�����ͷ�ĵ�ַ���Ƿ�������Ӧ��һ��
+         2.����������ĵ�ַ�Ƿ�������յĵ�ַһ��
+20.��copy������ǰ��ҳ�棬��ζ�inputʩ����ʽ��
+���������ֱ����input���дstyle���ɣ��Ͼ���Ҫ����ʽ����
+21.sql��������⣨δ��ӳɹ���δ�޸ĳɹ���
+���������һ��sql������navicat������й�����Ӧ�õ���Ŀ��
+22.��ָ����ν����
+���������ϵͳ������ָ���쳣����ô�϶���������ĳһ�У���ô��Ϳ�
+         ��һ�����С�.���ĵط������ǰ��Ϊ�գ����Ի���ֿ�ָ���쳣
+23.��ʾ��ʱ�䲻�����ں�ʱ���ϵ���ô���ģ�
+����������������ݿ�
+         Timestamp timestamp = new Timestamp(date.getTime());
+         ps.setTimestamp(3,timestamp);
+         �����ݿ����ó�
+         role.setDate(resultSet.getTimestamp("r_date"));
+24.java.sql.SQLException: No value specified for parameter 1
+select h_estate,h_unitNumber,h_floor,h_roomNo,h_facility,
+h_img,h_address,h_addTime,h_updateTime from house 
+where h_id = ?
+�����ԭ��:��h_id=������û�и�����ֵ��û��id������ô�飬����ĸ���
+�����������h_id��ֵ
+25.SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm");
+���������sdf.parse()��仰���׳��쳣��try-catch�������
+         sdf�Ĺ����������д���ڣ���дʱ�䣬���������״�
+         Dao����Ҫnew java.sql.Date(����������)��.getTime()����
+26.ҳ����ʾ����������ָ�����<form>�������⣿
+��������������Ͼ���������ʽ��д��������
+         �п�����${rent.r_id}��idǰ���r_ûд
+27.��������͵���������id,������ûӴ��ȡ����
+�����������Ļ�ȡid���ֶ���jspҳ���е��ֶβ�һ��
+28.Servlet��jspд�Ķ�û������ҳ�������Ӧһ�룬��Ӧ����ȫ��
+��500״̬�룿
+���������500״̬����Ƿ��������յ�����������󣬵�����Ӧ���ݲ���ȫ
+�����޷�������Ӧ����Ӧ���ݲ���ȫ��ҳ�淢����������ҳ�����н��յ�
+λ�ã�����û�н��յ����ݣ�������û����Ӧ������
+�޷�������Ӧ��������Ҫͨ��id�����ݿ⣬��������������ˣ�������û��
+ȥ�������ݣ������޷���ѯ���ݣ����޷����ظ���������ݣ�
+��ε�����ʱ����Ҫ����ҳ�������������page��pageSize���Ƿ�����û��
+����������ֵ������ҳ�����еط���Ҫ��Щֵ��������û����Ӧ���������
+���Ե�ĳЩ�ط�ҳ����޷�������
+29.�ж�������Ƿ�Ϊ������
+���������ѭ�����Ҫ����������п����������������̳�������ʱ��
+Ϊʲô���������жϣ�
+��Ϊ�����������Կ�������ô���������һ���������Լ���Ӧ�����Ǻ���
+��ô���Կ���֮ǰ����Ȼ���Ϳ����ж����������Ƿ�Ϊ����
+Ȼ��������Ȼ�ǲ��ܽ�����ȫ���ж��Ƿ�Ϊ�������������bug
+��ô���ʱ�����Ҫ���ÿ��أ�Ҳ����boolean = true
+��ĳһ����ִ��֮��������boolean = false����ô����ĳ�����Ҫ�ж�
+boolean�Ƿ�Ϊtrue�����������ô����ִ����ǰ������ݣ������Ļ���
+����ִ��boolean = true�Ĵ����ˣ������ͺܺõĽ�����������
+30.��һ�ű���û��idΨһֵ����Ҫ����ͬ��id�����ֵ����Щֵ��Ȼ��
+��ͬ�ģ�����sql���ͨ��id���Բ鵽���ֵ�����Ƕ��ڶ��ֵ���޸��޷�
+������û�취ͬʱ��һ��id�����ֵ����ô�����
+����������޸� == ɾ�� + ���
+�㲻��ͨ��id���ж��丳���ֵ����ô�Ͱ���ɾ����ɾ��֮����ͨ��id����
+��ӣ������ͺܺõı����˸���ͬid�������ֵͬ������
+spring����г��ֵ�����
+31.FileNotFoundException: Could not open
+ ServletContext resource [/jdbc.properties]
+����������޷��ҵ�jdbc�������ļ�
+ԭ������ǣ�1.����������⣬û�м��ص�����ļ�
+           2.���ִ��ˣ��������spring��xml�ļ���������Щ��ĸд����
+           3.��û�м��ص�����ļ�location="classpath:/jdbc.properties"
+�ҳ��ֵ�����ʱû��дclasspath:/,Ȼ��������Ĵ���
+32.Incorrect result size: expected 1, actual 0
+ʹ��jdbcTemplateʱ��ʹ��queryForObject��û����queryForList
+���ղ���������ݣ�Ԥ��Ϊ1��ʵ����0��û�а취���ع涨���쳣
+�����������try catch����queryForObject����ExceptionȥѰ�ҽ������
+33.sax:Simple API For XML����һ��XML���������������
+��������������DOM��SAX��һ���ٶȸ��죬����Ч�ķ�����������ɨ���ĵ���
+һ��ɨ��һ�߽��������������DOM��SAX�����ڽ����ĵ�������ʱ��ֹͣ������
+���κ����ﶼ�����෴��һ�棬����SAX��˵���ǲ������ӡ�
+34.����ʱ��ʾ���� Error parsing SQL Mapper Configuration. 
+Cause: java.io.IOException: Could not find resource com/shao/mapping/userMapper.xml
+���������idea�������src��javaĿ¼��xml�ļ�
+˼·����IDEA maven��Ŀ��srcԴ�����µ�xml����Դ�ļ������classes�ļ���
+��������������ǣ�����maven��pom�ļ����ã��ڽڵ�����Ӵ��룺
+<build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+35.Mapped Statements collection does not contain value for com.px.dao.EmpDao
+���������������ʾ������EmpMapper�е�findAllû����EmpDaoImpl��д
+List<Emp> empList = sqlSession.selectList("com.px.dao.EmpDao");û��findAll
+36.Error creating document instance.  Cause: org.xml.sax.SAXParseException;
+lineNumber: 17; columnNumber: 33; Ԫ������Ϊ "mapper" �����ݱ���ƥ�� "EMPTY"��
+���������������jdbcxml�����ļ���ʱ��ӳ���������
+<mappers>
+		<mapper>EmpMapper.xml</mapper>
+	</mappers>
+
+ʵ��Ӧ����<mappers>
+		<mapper resource="EmpMapper.xml"/>
+	</mappers>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
