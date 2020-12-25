@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
  * 2.重用线程
  */
 public class ThreadPool {
+    //修改
     public static void main(String[] args) {
         ExecutorService threadPool = Executors.newFixedThreadPool(5);
         //指定十个任务
